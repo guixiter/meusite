@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Minha Princesa 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffe);
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+      background-color: #fff0f5;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #d63384;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-1000px) rotate(45deg); opacity: 0; }
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 1em;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <!-- 30 floating hearts -->
+    <script>
+      for(let i=0;i<30;i++){
+        let heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random()*100 + 'vw';
+        heart.style.animationDuration = (5 + Math.random()*5) + 's';
+        document.querySelector('.hearts').appendChild(heart);
+      }
+    </script>
+  </div>
+
+  <audio autoplay loop>
+    <source src="the neighbourhood - reflections (legendado).mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <header>
+    <h1>Para Minha Princesa</h1>
+    <p>Você é tudo pra mim. Me perdoa por te machucar.</p>
+  </header>
+
+  <section>
+    <h2>Carta para você 💌</h2>
+    <p>
+      Amor, eu errei. E por mais que palavras nem sempre bastem, eu precisava te escrever isso.<br><br>
+      Você é a melhor parte de mim. A luz nos meus dias, o abraço que me acalma, o olhar que me dá paz. Me dói saber que eu te magoei. Nunca foi essa a intenção. Só quero te ver sorrindo e te fazer feliz. <br><br>
+      Quero construir com você, crescer com você, sorrir com você... E te amar mais a cada dia. Obrigado por estar aqui, mesmo quando eu falho. Você é meu lar. Te amo pra sempre. ❤️<br><br>
+      Com todo meu coração,<br>
+      Seu amor 💖
+    </p>
+  </section>
+
+  <section>
+    <h2>Nossos Momentos 📸</h2>
+    <div class="gallery">
+      <!-- Substitua os src abaixo pelas fotos de vocês -->
+      <img src="IMG_20240810_195621.jpg" alt="Momento 1">
+      <img src="WhatsApp Image 2024-10-20 at 10.51.15 (1).jpeg" alt="Momento 2">
+      <img src="WhatsApp Image 2025-04-29 at 20.47.48.jpeg" alt="Momento 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>Promessas sinceras ✨</h2>
+    <ul>
+      <li>Te escutar de verdade sempre.</li>
+      <li>Te respeitar em todos os momentos.</li>
+      <li>Te lembrar o quanto você é especial, todos os dias.</li>
+      <li>Ser um porto seguro pra você.</li>
+      <li>Te amar mais e mais, sempre.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Feito com todo o amor do mundo por alguém que te ama mais do que tudo 💗
+  </footer>
+</body>
+</html>
